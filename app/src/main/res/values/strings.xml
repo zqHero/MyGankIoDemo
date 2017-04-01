@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MyGankIoDemo</string>
+    <string name="navigation_drawer_open">打开</string>
+    <string name="navigation_drawer_close">关闭</string>
+
+
+    <array name="tab_str_arr">
+        <item>每日精选</item>
+        <item>福利</item>
+        <item>Android</item>
+        <item>iOS</item>
+        <item>前端</item>
+        <item>拓展资源</item>
+        <item>休息视频</item>
+    </array>
+
+</resources>
