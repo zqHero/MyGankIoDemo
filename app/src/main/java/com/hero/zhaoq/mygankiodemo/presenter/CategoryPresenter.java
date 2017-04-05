@@ -49,7 +49,7 @@ public class CategoryPresenter implements ICateFragPresenter {
         //恢复保存的数据
         if (savedInstanceState != null) {
             mDataList = savedInstanceState.getParcelableArrayList("data");
-            //恢复之前保存的请求页数
+            //恢复之前    保存的请求页数
             mCurrentPage = savedInstanceState.getInt("page", mCurrentPage);
         }
     }
@@ -81,7 +81,7 @@ public class CategoryPresenter implements ICateFragPresenter {
     }
 
     @Override
-    public void process(Bundle savedInstanceState) {
+    public void bindData(Bundle savedInstanceState) {
         //处理  数据信息：
         if (mDataList != null && mDataList.size() != 0) {
             catagFragView.getDSucesUpdateUI(mDataList);
@@ -97,6 +97,6 @@ public class CategoryPresenter implements ICateFragPresenter {
 
     @Override
     public void pullToRefresh(boolean isLoadMore) {
-        mModel.requestData(mCategory, mCurrentPage++);
+        mModel.requestData(mCategory, ++mCurrentPage);
     }
 }

@@ -25,7 +25,7 @@ public interface ICateFragPresenter {
      */
     void initData(Bundle bundle, Bundle savedInstanceState);
 
-    void process(Bundle savedInstanceState);
+    void bindData(Bundle savedInstanceState);
 
     /**
      * 请求分类数据

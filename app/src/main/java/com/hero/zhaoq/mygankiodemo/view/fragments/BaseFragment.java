@@ -50,11 +50,11 @@ public abstract class BaseFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initViewListener();   //TODO 初始化  事件
-        process(savedInstanceState);  //TODO 绑定  数据
+        bindData(savedInstanceState);  // TODO  绑定  数据
     }
 
     protected abstract void initViewListener();
-    protected abstract void process(Bundle savedInstanceState);
+    protected abstract void bindData(Bundle savedInstanceState);
 
     /**
      * 创建菜单，封装解决 Fragment 与 ViewPager 使用时   创建菜单不正确的问题

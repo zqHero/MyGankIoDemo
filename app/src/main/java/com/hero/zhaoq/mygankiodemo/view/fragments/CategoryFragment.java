@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.hero.zhaoq.mygankiodemo.Constant;
 import com.hero.zhaoq.mygankiodemo.R;
@@ -48,14 +49,12 @@ public class CategoryFragment extends BaseFragment implements
     SwipeRefreshLayout mSwipeRefreshLayout;
 
     private String mCategory;
-    private int mOffset;
 
     private CategoryAdapter mAdapter;
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         mPresenter.onSaveInstanceState(outState);
-        outState.putInt("offset", mRecyclerView.computeVerticalScrollOffset());
         super.onSaveInstanceState(outState);
     }
 
@@ -67,14 +66,11 @@ public class CategoryFragment extends BaseFragment implements
     @Override
     protected void initData(Bundle savedInstanceState) {
         mPresenter = new CategoryPresenter(this);
-        if (savedInstanceState != null) {
-            //恢复之前的RecyclerView的偏移量
-            mOffset = savedInstanceState.getInt("offset");
-        }
         if (getArguments() != null) {
             //因为category与UI显示相关，所以放在View中处理
             mCategory = getArguments().getString("category");
         }
+        //TODO  获取  数据：
         mPresenter.initData(getArguments(), savedInstanceState);
     }
 
@@ -102,13 +98,21 @@ public class CategoryFragment extends BaseFragment implements
                 mPresenter.pullToRefresh(true);
             }
         });
+
+        mAdapter.setOnItemClickListener(new CategoryAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(getActivity(),
+                        mAdapter.getDataList().get((int)view.getTag()).toString(),
+                        Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
-    protected void process(Bundle savedInstanceState) {
-        mPresenter.process(savedInstanceState);
-        //垂直  偏移距离
-//        setVerticalOffset(mOffset);
+    protected void bindData(Bundle savedInstanceState) {
+        // TODO 绑定数据
+        mPresenter.bindData(savedInstanceState);
     }
 
     /**
