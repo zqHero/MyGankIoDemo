@@ -12,7 +12,6 @@ import com.hero.zhaoq.mygankiodemo.MApplication;
  */
 public class StringUtils {
 
-
     private static Context mContext;
 
     public static Context getApplicationContext() {
@@ -20,9 +19,7 @@ public class StringUtils {
     }
 
     public static String[] getStringArray(int array) {
-        return mContext.getResources().getStringArray(array);
+        return getApplicationContext().getResources().getStringArray(array);
     }
-
-
 
 }

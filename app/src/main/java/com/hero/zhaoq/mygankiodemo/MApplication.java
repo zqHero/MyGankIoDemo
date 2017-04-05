@@ -3,6 +3,7 @@ package com.hero.zhaoq.mygankiodemo;
 import android.app.Application;
 import android.content.Context;
 
+import com.hero.zhaoq.mygankiodemo.utils.DimensUtils;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -26,10 +27,10 @@ public class MApplication extends Application {
         init();
     }
 
-    private void init() {
+    private void init () {
         //TODO 初始化  请求服务
-//        ApiService.init();  //初始化  Retrofit请求服务
-//        DisplayUtil.init(this);  //
+        ApiService.init();  //初始化  Retrofit请求服务
+        DimensUtils.init(this);  //
 
         if (LeakCanary.isInAnalyzerProcess(this)) {
             return;

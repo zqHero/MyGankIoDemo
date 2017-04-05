@@ -1,4 +1,4 @@
-package com.hero.zhaoq.mygankiodemo.baseManager;
+package com.hero.zhaoq.mygankiodemo;
 
 import android.app.Activity;
 import android.content.Context;

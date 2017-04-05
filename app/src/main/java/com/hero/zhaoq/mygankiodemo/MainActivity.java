@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.hero.zhaoq.mygankiodemo.view.activitys.BaseActivity;
 import com.hero.zhaoq.mygankiodemo.presenter.MainPresenter;
-import com.hero.zhaoq.mygankiodemo.view.TabAdapter;
+import com.hero.zhaoq.mygankiodemo.view.adapters.TabAdapter;
 import com.hero.zhaoq.mygankiodemo.view.inters.ImainView;
 
 import java.util.List;
@@ -74,7 +74,8 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     protected void process() {
-
+        //给  Tab  添加Title数据
+        mPresenter.process();
     }
 
     @Override
@@ -102,14 +103,27 @@ public class MainActivity extends BaseActivity implements
         return true;
     }
 
-    //===========TODO 从ImainView 继承的方法  实现 viewpager和Tablayout的联动===
+    //===========TODO 从 ImainView 继承的方法  实现 viewpager  和  Tablayout的联动===
     @Override
     public void setSelectPage(int item) {
-
+        mViewPager.setCurrentItem(item);
     }
 
     @Override
     public void setTab(List<Fragment> fragmentList, String[] titles) {
+        //TODO  适配  tab的  title
+        mTabAdapter.setData(fragmentList, titles);
+        //默认选中福利
+        mViewPager.setCurrentItem(1);
+    }
 
+    //TODO  需要实现的  方法  =================================================
+    @Override
+    public void onBackPressed() {
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+            mDrawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 }

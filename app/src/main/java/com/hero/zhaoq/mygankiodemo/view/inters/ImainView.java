@@ -17,7 +17,6 @@ public interface ImainView {
     //选中  viewpager页
     void setSelectPage(int item);
 
-    //viewpager  设置Tab变化
+    //viewpager  设置    Tab变化
     void setTab(List<Fragment> fragmentList, String[] titles);
-
 }

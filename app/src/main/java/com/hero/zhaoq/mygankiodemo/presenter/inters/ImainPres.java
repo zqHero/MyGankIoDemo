@@ -10,8 +10,10 @@ import android.content.Intent;
  */
 public interface ImainPres {
 
+    //获取  tab的  数据信息
     void requestData(Intent intent);
 
+    //该回调  用于处理  Tab 变化
     void process();
 
 }

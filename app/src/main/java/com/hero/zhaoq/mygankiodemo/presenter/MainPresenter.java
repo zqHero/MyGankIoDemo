@@ -2,6 +2,7 @@ package com.hero.zhaoq.mygankiodemo.presenter;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 
 import com.hero.zhaoq.mygankiodemo.MainActivity;
 import com.hero.zhaoq.mygankiodemo.R;
@@ -37,7 +38,7 @@ public class MainPresenter implements ImainPres {
     public void requestData(Intent intent) {
         //请求 数据
         mTitles = StringUtils.getStringArray(R.array.tab_str_arr);
-        initFragmentList();
+        initFragmentList();//TODO
     }
 
     /**
@@ -54,6 +55,7 @@ public class MainPresenter implements ImainPres {
 
     @Override
     public void process() {
-
+        mView.setTab(mFragmentList, mTitles);
+        mView.setSelectPage(0);
     }
 }

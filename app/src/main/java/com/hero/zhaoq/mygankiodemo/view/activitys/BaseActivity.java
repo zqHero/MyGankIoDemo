@@ -5,7 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.hero.zhaoq.mygankiodemo.baseManager.ActivityManager;
+import com.hero.zhaoq.mygankiodemo.ActivityManager;
 
 import butterknife.ButterKnife;
 
@@ -35,7 +35,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         initData();  //初始化 数据
 
         initViewListener(); //初始化  事件
-        process();
+        process(); //处理  数据
     }
 
     //-==-=-=-=-===========需要  子类实现的  抽象 方法：=================
@@ -48,7 +48,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected abstract void initViewListener();
 
     protected abstract void process();
-    //-------------------父类 方法---------------------------------------
+    //-------------------父类 方法-------------------------------------
 
     @Override
     protected void onDestroy() {

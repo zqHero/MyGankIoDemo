@@ -1,4 +1,4 @@
-package com.hero.zhaoq.mygankiodemo.view;
+package com.hero.zhaoq.mygankiodemo.view.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,16 +21,9 @@ public class TabAdapter extends FragmentStatePagerAdapter {
         super(fm);
     }
 
-    public TabAdapter(FragmentManager fm, List<Fragment> fragmentList, String[] titles) {
-        super(fm);
-        mFragmentList = fragmentList;
-        mTitles = titles;
-        notifyDataSetChanged();
-    }
-
     public void setData(List<Fragment> fragmentList, String[] titles) {
-        mFragmentList = fragmentList;
-        mTitles = titles;
+        this.mFragmentList = fragmentList;
+        this.mTitles = titles;
         notifyDataSetChanged();
     }
 
