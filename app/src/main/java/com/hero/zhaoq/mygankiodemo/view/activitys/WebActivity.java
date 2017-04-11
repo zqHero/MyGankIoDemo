@@ -23,7 +23,7 @@ import butterknife.BindView;
  * Email:zhaoq_hero@163.com
  * Date:2017/04/11   10/56
  */
-public class WebActivity extends BaseActivity {
+public class WebActivity extends StatusBarActivity {
 
     @BindView(R.id.toolbar) Toolbar mToolbar;
     @BindView(R.id.swipe_refresh) SwipeRefreshLayout mSwipeRefreshLayout;
@@ -56,6 +56,9 @@ public class WebActivity extends BaseActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
         initWebViewSettings();
+
+        //TODO
+        setStatusBarTranslucent(this);
     }
 
     @Override
