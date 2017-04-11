@@ -1,6 +1,5 @@
 package com.hero.zhaoq.mygankiodemo;
 
-
 import com.hero.zhaoq.mygankiodemo.modle.DataInfo;
 import com.hero.zhaoq.mygankiodemo.modle.DayInfo;
 import com.hero.zhaoq.mygankiodemo.modle.GankInfo;
@@ -8,8 +7,6 @@ import com.hero.zhaoq.mygankiodemo.modle.GankInfo;
 import java.util.List;
 
 import io.reactivex.Observable;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
@@ -19,7 +16,7 @@ import retrofit2.http.Path;
  * Email:zhaoq_hero@163.com
  * Date:2017/04/05   13/54
  */
-public interface GankApi {
+public interface GankApiServerMethod {
 
     @GET("day/{date}")
     Observable<GankInfo<DayInfo>> getDayGank(@Path("date") String date);
@@ -30,7 +27,6 @@ public interface GankApi {
      */
     @GET("day/history")
     Observable<GankInfo<List<String>>> getPublishDays();
-
 
     /**
      * 获取分类数据

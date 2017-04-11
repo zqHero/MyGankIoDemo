@@ -13,8 +13,9 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
  */
 public class ApiService {
 
-    private static GankApi sGankApi;
+    private static GankApiServerMethod sGankApi;
 
+    //初始化  Retrofit  请求
     public static void init() {
         // TODO  -------------------------------
         Retrofit sRetrofit = new Retrofit.Builder()
@@ -24,10 +25,10 @@ public class ApiService {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
 
-        sGankApi = sRetrofit.create(GankApi.class);
+        sGankApi = sRetrofit.create(GankApiServerMethod.class);
     }
 
-    public static GankApi getGankApi() {
+    public static GankApiServerMethod getGankApi() {
         return sGankApi;
     }
 

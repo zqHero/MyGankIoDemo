@@ -22,19 +22,19 @@ import java.util.List;
  */
 public class MainPresenter implements ImainPres {
 
-    private ImainView mView;
+    private ImainView mView;//TODO 持有 View的  引用
 
     private String[] mTitles;
     private List<Fragment> mFragmentList;
 
-    //TODO  实现   view和presenter的交互：
+    //TODO  实现    view 和   presenter的交互：
     public MainPresenter(ImainView imainView) {
         this.mView = imainView;
     }
 
     @Override
     public void requestData(Intent intent) {
-        //请求 数据
+        //TODO  请求 数据
         mTitles = StringUtils.getStringArray(R.array.tab_str_arr);
         initFragmentList();//TODO
     }
