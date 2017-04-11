@@ -25,6 +25,7 @@ import butterknife.BindView;
 
 /**
  * 仿写  gankIo demo
+ * https://github.com/229457269/MyGankIoDemo
  */
 public class MainActivity extends BaseActivity implements
         NavigationView.OnNavigationItemSelectedListener ,
