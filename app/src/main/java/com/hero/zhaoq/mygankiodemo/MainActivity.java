@@ -13,8 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.hero.zhaoq.mygankiodemo.view.activitys.BaseActivity;
+import com.hero.zhaoq.mygankiodemo.utils.StatusBarUtil;
 import com.hero.zhaoq.mygankiodemo.presenter.MainPresenter;
+import com.hero.zhaoq.mygankiodemo.view.activitys.BaseActivity;
 import com.hero.zhaoq.mygankiodemo.view.activitys.StatusBarActivity;
 import com.hero.zhaoq.mygankiodemo.view.adapters.TabAdapter;
 import com.hero.zhaoq.mygankiodemo.view.inters.ImainView;
@@ -26,7 +27,7 @@ import butterknife.BindView;
 /**
  * 仿写  gankIo demo
  */
-public class MainActivity extends StatusBarActivity implements
+public class MainActivity extends BaseActivity implements
         NavigationView.OnNavigationItemSelectedListener ,
         ImainView{
 
@@ -53,9 +54,9 @@ public class MainActivity extends StatusBarActivity implements
         mViewPager.setAdapter(mTabAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
 
-        //TODO 设置  状态栏颜色：
-//        setStatusBarColor(this,getResources().getColor(R.color.cardview_light_background));
-//        setStatusBarTranslucent(this);
+        //TODO  设置   状态栏变色
+        StatusBarUtil.setColorForDrawerLayout(this, (DrawerLayout) findViewById(R.id.drawer_layout),
+                getResources().getColor(R.color.odf), 0);
     }
 
     private MainPresenter mPresenter;

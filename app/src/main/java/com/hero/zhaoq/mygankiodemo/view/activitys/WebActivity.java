@@ -13,6 +13,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.hero.zhaoq.mygankiodemo.R;
+import com.hero.zhaoq.mygankiodemo.utils.StatusBarUtil;
 import com.hero.zhaoq.mygankiodemo.view.mwidgets.ScrollWebView;
 
 import butterknife.BindView;
@@ -23,7 +24,7 @@ import butterknife.BindView;
  * Email:zhaoq_hero@163.com
  * Date:2017/04/11   10/56
  */
-public class WebActivity extends StatusBarActivity {
+public class WebActivity extends BaseActivity {
 
     @BindView(R.id.toolbar) Toolbar mToolbar;
     @BindView(R.id.swipe_refresh) SwipeRefreshLayout mSwipeRefreshLayout;
@@ -57,8 +58,8 @@ public class WebActivity extends StatusBarActivity {
         }
         initWebViewSettings();
 
-        //TODO
-        setStatusBarTranslucent(this);
+        //TODO  设置 状态栏颜色
+        StatusBarUtil.setColor(this,getResources().getColor(R.color.odf),0);
     }
 
     @Override
