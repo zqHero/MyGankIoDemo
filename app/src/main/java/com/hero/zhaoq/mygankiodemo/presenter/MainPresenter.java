@@ -2,9 +2,7 @@ package com.hero.zhaoq.mygankiodemo.presenter;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 
-import com.hero.zhaoq.mygankiodemo.MainActivity;
 import com.hero.zhaoq.mygankiodemo.R;
 import com.hero.zhaoq.mygankiodemo.presenter.inters.ImainPres;
 import com.hero.zhaoq.mygankiodemo.utils.StringUtils;

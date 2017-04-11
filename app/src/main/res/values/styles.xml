@@ -13,6 +13,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!--  AppbarLayout  主题-->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!--  Toolbar  主题-->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <!-- 此处必须要有 parent，否则会导致文字不可见，而且并不是所有的 parent 都可用 -->
     <!-- 最好继承 TextAppearance -->
     <style name="TabLayout.Text" parent="TextAppearance.Design.Hint">

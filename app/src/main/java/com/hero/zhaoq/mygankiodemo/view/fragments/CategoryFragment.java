@@ -1,10 +1,13 @@
 package com.hero.zhaoq.mygankiodemo.view.fragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -14,6 +17,7 @@ import com.hero.zhaoq.mygankiodemo.R;
 import com.hero.zhaoq.mygankiodemo.modle.DataInfo;
 import com.hero.zhaoq.mygankiodemo.presenter.CategoryPresenter;
 import com.hero.zhaoq.mygankiodemo.utils.DimensUtils;
+import com.hero.zhaoq.mygankiodemo.view.activitys.WebActivity;
 import com.hero.zhaoq.mygankiodemo.view.adapters.CategoryAdapter;
 import com.hero.zhaoq.mygankiodemo.view.inters.ICatagFragView;
 import com.hero.zhaoq.mygankiodemo.view.mwidgets.SpaceDecoration;
@@ -102,9 +106,11 @@ public class CategoryFragment extends BaseFragment implements
         mAdapter.setOnItemClickListener(new CategoryAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(getActivity(),
-                        mAdapter.getDataList().get((int)view.getTag()).toString(),
-                        Toast.LENGTH_LONG).show();
+                //TODO  打开 webActivity  界面
+                if (TextUtils.isEmpty(mAdapter.getDataList().get(position).getUrl())) {
+                    return;
+                }
+                openWebView(getContext(), mAdapter.getDataList().get(position).getUrl());
             }
         });
     }
@@ -140,8 +146,9 @@ public class CategoryFragment extends BaseFragment implements
         }
     }
 
-    @Override
-    public void toWebActivity(String url) {
-
+    public static void openWebView(Context context, String url) {
+        Intent intent = new Intent(context, WebActivity.class);
+        intent.putExtra("url", url);
+        context.startActivity(intent);
     }
 }

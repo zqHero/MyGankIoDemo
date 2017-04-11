@@ -38,7 +38,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         process(); //处理  数据
     }
 
-    //-==-=-=-=-===========需要  子类实现的  抽象 方法：=================
+    //-==-=-=-=-===========需要  子类实现的  抽象 方法：===========
     protected abstract int getPageLayoutID();
 
     protected abstract void initData();

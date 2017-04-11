@@ -24,8 +24,4 @@ public interface ICatagFragView {
      */
     void getDSucesUpdateUI(List<DataInfo> dataList);
 
-    /**
-     * 跳转到 WebViewActivity
-     */
-    void toWebActivity(String url);
 }

@@ -118,12 +118,18 @@ public class MainActivity extends BaseActivity implements
     }
 
     //TODO  需要实现的  方法  =================================================
+    private long firstClickTime = 0;
     @Override
     public void onBackPressed() {
         if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
             mDrawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+           if (System.currentTimeMillis() - firstClickTime < 3000){
+               System.exit(0);
+           }else{
+               firstClickTime = System.currentTimeMillis();
+               Toast.makeText(this,"再次点击退出程序",Toast.LENGTH_LONG).show();
+           }
         }
     }
 }

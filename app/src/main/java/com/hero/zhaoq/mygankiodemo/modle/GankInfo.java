@@ -9,6 +9,7 @@ import java.util.List;
  * Date:2017/04/05   13/55
  */
 public class GankInfo<T> {
+
     private List<String> category;
     private boolean error;
     private T results;

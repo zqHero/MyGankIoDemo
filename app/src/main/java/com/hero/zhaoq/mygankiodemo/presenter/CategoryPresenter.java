@@ -24,8 +24,8 @@ public class CategoryPresenter implements ICateFragPresenter {
 
     private List<DataInfo> mDataList = new ArrayList<>();
 
-    private ICatagFragView catagFragView;
-    private IModel mModel;
+    private ICatagFragView catagFragView;  //持有 view 的引用
+    private IModel mModel;  //持有  modle的 引用
 
     private String mCategory;
     private int mCurrentPage;
@@ -92,7 +92,7 @@ public class CategoryPresenter implements ICateFragPresenter {
 
     @Override
     public void fail(String msg) {
-        Log.i("info", msg);
+        Log.i("info", "加载数据失败============");
     }
 
     @Override
