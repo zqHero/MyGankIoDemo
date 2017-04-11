@@ -16,7 +16,6 @@ import android.widget.Toast;
 import com.hero.zhaoq.mygankiodemo.utils.StatusBarUtil;
 import com.hero.zhaoq.mygankiodemo.presenter.MainPresenter;
 import com.hero.zhaoq.mygankiodemo.view.activitys.BaseActivity;
-import com.hero.zhaoq.mygankiodemo.view.activitys.StatusBarActivity;
 import com.hero.zhaoq.mygankiodemo.view.adapters.TabAdapter;
 import com.hero.zhaoq.mygankiodemo.view.inters.ImainView;
 

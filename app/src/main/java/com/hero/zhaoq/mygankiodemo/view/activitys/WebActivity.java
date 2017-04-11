@@ -102,7 +102,11 @@ public class WebActivity extends BaseActivity {
         switch (item.getItemId()) {
             //TODO  回退  图标的  点击事件
             case android.R.id.home:
-                finish();
+                if (mWebView.canGoBack()){
+                    mWebView.goBack();
+                }else{
+                    finish();
+                }
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -150,6 +154,7 @@ public class WebActivity extends BaseActivity {
         //以下  两方法 实现相同效果
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            //TODO  记录加载  次数 只有在第一页  才准许mswirefresh刷新
             view.loadUrl(url);//在当前的webview中跳转到新的url
             return true;
         }
