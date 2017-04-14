@@ -8,9 +8,8 @@
 ####上图：
 
 ![这里写图片描述](http://img.blog.csdn.net/20170411145334912?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzIzMzA5Nw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-![这里写图片描述](http://img.blog.csdn.net/20170411145401480?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzIzMzA5Nw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-![这里写图片描述](http://img.blog.csdn.net/20170411145552794?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzIzMzA5Nw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
+![这里写图片描述](http://img.blog.csdn.net/20170411145401480?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzIzMzA5Nw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)![这里写图片描述](http://img.blog.csdn.net/20170411145552794?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzIzMzA5Nw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ####项目 目录结构：
 ![这里写图片描述](http://img.blog.csdn.net/20170411150008781?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzIzMzA5Nw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
@@ -327,10 +326,8 @@ public class StatusBarUtil {
 
 ```
 
+
 Github:https://github.com/229457269/MyGankIoDemo
-
-
-
 
 
 再次感谢一下作者：
@@ -338,11 +335,6 @@ http://www.open-open.com/lib/view/open1455584716230.html
 http://jaeger.itscoder.com/android/2016/02/15/status-bar-demo.html
 http://www.apkbus.com/thread-272535-1-1.html
 https://github.com/MyLifeMyTravel/GankIO
-
-
-
-
-
 
 
 
