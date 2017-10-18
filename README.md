@@ -327,7 +327,9 @@ public class StatusBarUtil {
 ```
 
 
-Github:https://github.com/229457269/MyGankIoDemo
+Github:https://github.com/zqHero/MyGankIoDemo
+
+csdn:http://blog.csdn.net/u013233097/article/details/70054659
 
 
 再次感谢一下作者：
